@@ -1,0 +1,18 @@
+
+<div ng-controller="RaffleCtrl">
+	<form ng-submit="addEntry()">
+	  <input type="text" ng-model="newEntry.name" placeholder="Type something here">
+		<input type="submit" value="Add">
+	</form>
+
+	<ul>
+		<li ng-repeat="entry in entries">
+			{{entry.name}} / <a ng-show="entry.winner">WINNER</a>
+		</li>
+	</ul>
+
+	<button ng-click="drawWinner()">Draw</button>	
+</div>
+
+
+
